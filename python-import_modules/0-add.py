@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import add_0 as freak
+from add_0 import add
 a = 1
 b = 2
-print("{} + {} = {}".format(a, b, freak.add(a, b)))
+print("{} + {} = {}".format(a, b, add(a, b)))
