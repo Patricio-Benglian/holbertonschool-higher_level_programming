@@ -7,6 +7,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
         if len(eval("list_" + z)) < 2:
             for i in range(len(eval("list_" + z)), 2):
                 eval("list_" + z).append(0)
-    list_c = [list_a[0] + list_b[0], list_a[1] + list_b[1]]
-    tuple_c = tuple(list_c)
-    return (tuple_c)
+    return (list_a[0] + list_b[0], list_a[1] + list_b[1])
