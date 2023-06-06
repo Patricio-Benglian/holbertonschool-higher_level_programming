@@ -14,3 +14,5 @@ def roman_to_int(roman_string):
         else:
             return 0
     return decimal
+
+# fails when two subtractions (ej, XCIX, CMIX)
