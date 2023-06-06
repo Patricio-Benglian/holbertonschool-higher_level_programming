@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) == str:
+    if roman_string and type(roman_string) is str:
         converter = {'M': 1000, 'D': 500, 'C': 100,
                      'L': 50, 'X': 10, 'V': 5, 'I': 1}
         decimal = 0
@@ -13,3 +13,4 @@ def roman_to_int(roman_string):
             else:
                 return 0
         return decimal
+    return 0
