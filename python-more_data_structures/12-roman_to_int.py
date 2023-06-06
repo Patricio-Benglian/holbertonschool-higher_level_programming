@@ -9,4 +9,6 @@ def roman_to_int(roman_string):
                 decimal *= -1
             if converter[number]:
                 decimal += converter[number]
+        else:
+            return 0
     return decimal
