@@ -6,14 +6,14 @@ def roman_to_int(roman_string):
     output = []
     decimal = 0
     for number in roman_string:
-        # if converter.get(number):
-        # if subtraction, subtract current sum from current value
-        if decimal < converter[number] and decimal != 0:
-            output.append(converter[number] - decimal)
-            decimal = 0
+        if converter.get(number):
+            # if subtraction, subtract current sum from current value
+            if decimal < converter[number] and decimal != 0:
+                output.append(converter[number] - decimal)
+                decimal = 0
+            else:
+                decimal += converter[number]
         else:
-            decimal += converter[number]
-    # else:
-    # return 0
+            return 0
     output.append(decimal)
     return int(sum(output))
