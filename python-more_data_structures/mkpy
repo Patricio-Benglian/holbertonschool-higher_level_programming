@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "input filename"
+read filename
+echo "input prototype with colon tho"
+read prototype
+echo "#!/usr/bin/python3
+$prototype
+" > $filename
+let mainnum=${filename%-*}
+touch $mainnum-main.py
+chmod +x $filename
+chmod +x $mainnum-main.py
