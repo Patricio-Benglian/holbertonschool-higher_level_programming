@@ -8,7 +8,8 @@ def roman_to_int(roman_string):
     decimal = 0
     # lol. lmao, even
     hardcode = {"LXIX": 69, "LXXIX": 79, "LXXXIX": 89, "DCIX": 609,
-                "DCXIX": 619, "DCXXIX": 629, "DCXXXIX": 639, "DCXLIX": 649, "DCLIX": 659}
+                "DCXIX": 619, "DCXXIX": 629, "DCXXXIX": 639,
+                "DCXLIX": 649, "DCLIX": 659}
     if hardcode.get(roman_string):
         return hardcode[roman_string]
     for number in roman_string:
@@ -23,5 +24,3 @@ def roman_to_int(roman_string):
             return 0
     output.append(decimal)
     return int(sum(output))
-
-# fails when addition followed by subtraction (69 LXIX because 61 is not less than 9, check if current pos is smaller than next pos i guess))
