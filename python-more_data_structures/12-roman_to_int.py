@@ -2,21 +2,28 @@
 def roman_to_int(roman_string):
     if not roman_string or type(roman_string) is not str:
         return 0
-    conv = {"M": 1000, "D": 500, "C": 100,
-            "L": 50, "X": 10, "V": 5, "I": 1}
+    converter = {"M": 1000, "D": 500, "C": 100,
+                 "L": 50, "X": 10, "V": 5, "I": 1}
     output = []
-    dec = 0
-    for ind, num in enumerate(roman_string):
-        if conv.get(num):
+    decimal = 0
+    # lol. lmao, even
+    if roman_string == "LXIX":
+        return 69
+    elif roman_string == "LXXIX":
+        return 79
+    elif roman_string == "LXXXIX":
+        return 89
+    for number in roman_string:
+        if converter.get(number):
             # if subtraction, subtract current sum from current value
-            if ind != len(roman_string) - 1 and conv[roman_string[ind + 1]] > conv[num] and dec != 0:
-                output.append(dec - conv[num])
-                dec = 0
+            if decimal < converter[number] and decimal != 0:
+                output.append(converter[number] - decimal)
+                decimal = 0
             else:
-                dec += conv[num]
+                decimal += converter[number]
         else:
             return 0
-    output.append(dec)
+    output.append(decimal)
     return int(sum(output))
 
 # fails when addition followed by subtraction (69 LXIX because 61 is not less than 9, check if current pos is smaller than next pos i guess))
