@@ -8,7 +8,6 @@ def roman_to_int(roman_string):
     output = []
     for ind, num in enumerate(a):
         if conv.get(num):
-            # if subtraction, subtract current sum from current value
             if ind != len(a) - 1 and conv[a[ind + 1]] > conv[num]:
                 output.append(conv[num] * -1)
             else:
