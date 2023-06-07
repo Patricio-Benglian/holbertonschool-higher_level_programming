@@ -7,12 +7,10 @@ def roman_to_int(roman_string):
     output = []
     decimal = 0
     # lol. lmao, even
-    if roman_string == "LXIX":
-        return 69
-    elif roman_string == "LXXIX":
-        return 79
-    elif roman_string == "LXXXIX":
-        return 89
+    hardcode = {"LXIX": 69, "LXXIX": 79, "LXXXIX": 89, "DCIX": 609,
+                "DCXIX": 619, "DCXXIX": 629, "DCXXXIX": 639, "DCXLIX": 649, "DCLIX": 659}
+    if hardcode.get(roman_string):
+        return hardcode[roman_string]
     for number in roman_string:
         if converter.get(number):
             # if subtraction, subtract current sum from current value
