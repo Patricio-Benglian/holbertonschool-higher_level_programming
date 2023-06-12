@@ -16,3 +16,11 @@ class Sample:
     """Does X, Y and Z"""
     pass
 ```
+
+
+
+## Notes
+
+### Decorators
+```@attr.setter``` above the setter method
+```property``` above the getter method
