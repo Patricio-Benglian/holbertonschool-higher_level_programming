@@ -4,5 +4,6 @@
 
 class Square:
     pass
-    """Makes empty
+    """
+    Makes empty
     """
