@@ -14,6 +14,5 @@
 """Define Class Object"""
 class Sample:
     """Does X, Y and Z"""
-    def sampleMethod(self):
-        blablabla
+    pass
 ```
