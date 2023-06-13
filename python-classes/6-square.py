@@ -54,4 +54,4 @@ class Square:
             print("{}{}".format(" " * self.position[0], "#" * self.size))
         if self.size == 0:
             print()
-        return
+            return
