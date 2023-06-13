@@ -14,28 +14,18 @@ Using ``add_integer``
 
     >>> add_integer("Hello", "World")
     Traceback (most recent call last):
-      File "./0-main.py", line 4, in <module>
-        print(add_integer("Hello", "World"))
-      File "/root/chijete/holbertonschool-higher_level_programming/python-test_driven_development/0-add_integer.py", line 8, in add_integer
-        raise TypeError("a must be an integer")
+    ...
     TypeError: a must be an integer
 
     >>> add_integer(4, "World")
     Traceback (most recent call last):
-      File "./0-main.py", line 4, in <module>
-        print(add_integer("Hello", "World"))
-      File "/root/chijete/holbertonschool-higher_level_programming/python-test_driven_development/0-add_integer.py", line 8, in add_integer
-        raise TypeError("a must be an integer")
+    ...
     TypeError: b must be an integer
 
     >>> add_integer(3.5, 1.5)
     4
     
-    >>> add_integer(3.5, 1.5)
-    4
-
-    >>> add_integer(3.5, 1.5)
-    4
-
-    >>> add_integer(3.5, 1.5)
-    4
+    >>> add_integer(float('Ha'), float('Ha'))
+    Traceback (most recent call last):
+    ...
+    ValueError: could not convert string to float: 'Ha'
