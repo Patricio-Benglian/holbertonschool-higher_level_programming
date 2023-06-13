@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """
-What am i supposed to put
-for 5
-lines
+Add integers module
 """
 
 
