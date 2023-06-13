@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" I am defining the function """
+
+
 def add_integer(a, b=98):
     """ Returns sum of two numbers """
     if (type(a) != int and type(a) != float):
