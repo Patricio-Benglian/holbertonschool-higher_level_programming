@@ -10,8 +10,3 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
     else:
         return int(a)+int(b)
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("tests/add_integer.txt")
