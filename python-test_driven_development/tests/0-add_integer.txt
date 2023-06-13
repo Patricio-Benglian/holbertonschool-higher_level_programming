@@ -30,3 +30,12 @@ Using ``add_integer``
 
     >>> add_integer(3.5, 1.5)
     4
+    
+    >>> add_integer(3.5, 1.5)
+    4
+
+    >>> add_integer(3.5, 1.5)
+    4
+
+    >>> add_integer(3.5, 1.5)
+    4
