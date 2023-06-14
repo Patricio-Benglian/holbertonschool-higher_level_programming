@@ -2,6 +2,8 @@
 '''
 4-print_square module
 '''
+
+
 def checkErrors(size):
     '''
     Checks for input errors
@@ -10,6 +12,7 @@ def checkErrors(size):
         raise TypeError("size must be an integer")
     if size < 0:
         raise ValueError("size must be >= 0")
+
 
 def print_square(size):
     '''
