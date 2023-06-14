@@ -8,6 +8,7 @@ def errorCheck(text):
     if type(text) != str:
         raise TypeError("text must be a string")
 
+
 def text_indentation(text):
     '''
     Indents text on . : or ?
