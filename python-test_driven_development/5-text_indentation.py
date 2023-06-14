@@ -14,8 +14,10 @@ def text_indentation(text):
     Indents text on . : or ?
     '''
     errorCheck(text)
-    text = text.replace(". ", ".\n\n")
-    text = text.replace(": ", ":\n\n")
-    text = text.replace("? ", "?\n\n")
-    print (text, end="")
-        
+    text = text.replace(". ", ".")
+    text = text.replace(": ", ":")
+    text = text.replace("? ", "?")
+    text = text.replace(".", ".\n\n")
+    text = text.replace(":", ":\n\n")
+    text = text.replace("?", "?\n\n")
+    print(text, end="")
