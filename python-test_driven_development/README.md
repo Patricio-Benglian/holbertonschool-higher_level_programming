@@ -12,3 +12,5 @@ Using ``{function}``
     >>> {function}()
     {expected output}
 ```
+
+*** Make sure these tests cover as many possible edge cases imaginable. ***
