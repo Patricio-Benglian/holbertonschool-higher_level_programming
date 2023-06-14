@@ -8,12 +8,12 @@ Using ``text_indentation``
     
     >>> text_indentation("He.l?l:o")
     He.
-
+    <BLANKLINE>
     l?
-
+    <BLANKLINE>
     l:
-
-    o>>>
+    <BLANKLINE>
+    o
 
     >>> text_indentation((2 / 5))
     Traceback (most recent call last):
