@@ -13,7 +13,6 @@ def text_indentation(text):
     '''
     Indents text on . : or ?
     '''
-    output = str
     errorCheck(text)
     output = text.replace(". ", ".")
     output = output.replace(": ", ":")
