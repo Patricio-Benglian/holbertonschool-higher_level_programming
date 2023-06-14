@@ -25,4 +25,9 @@ Using ``print_square``
     Traceback (most recent call last):
     ...
     OverflowError: cannot convert float infinity to integer
+
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
     
