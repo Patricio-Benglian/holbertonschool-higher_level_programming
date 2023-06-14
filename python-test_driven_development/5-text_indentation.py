@@ -20,4 +20,6 @@ def text_indentation(text):
     output = output.replace(".", ".\n\n")
     output = output.replace(":", ":\n\n")
     output = output.replace("?", "?\n\n")
+    output = output.replace(" \n", "\n")
+    output = output.replace("\n ", "\n")
     print(output, end="")
