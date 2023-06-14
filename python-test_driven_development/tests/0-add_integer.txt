@@ -25,7 +25,7 @@ Using ``add_integer``
     >>> add_integer(3.5, 1.5)
     4
     
-    >>> add_integer(float('Ha'), float('Ha'))
+    >>> add_integer(4, float('Ha'))
     Traceback (most recent call last):
     ...
     ValueError: could not convert string to float: 'Ha'
@@ -37,3 +37,8 @@ Using ``add_integer``
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+    >>> add_integer(float('inf'), float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
