@@ -48,6 +48,18 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer(["e", 3, 5])
 
+    def test_NoList(self):
+        """
+        tests with no list
+        """
+        self.assertEqual(max_integer([]), None)
+
+    def test_LonelyNumber(self):
+        """
+        tests with a lone number
+        """
+        self.assertEqual(max_integer([17]), 17)
+
 
 if __name__ == "__main__":
     unittest.main()
