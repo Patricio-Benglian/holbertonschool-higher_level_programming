@@ -41,6 +41,13 @@ class TestMaxInteger(unittest.TestCase):
         """
         self.assertEqual(max_integer([-909, -22, -3]), -3)
 
+    def test_typeError(self):
+        """
+        tests error case
+        """
+        with self.assertRaises(TypeError):
+            max_integer(["e", 3, 5])
+
 
 if __name__ == "__main__":
     unittest.main()
