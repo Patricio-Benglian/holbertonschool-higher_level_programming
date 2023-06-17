@@ -56,7 +56,9 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         output = (
-            f"""{f"{self.print_symbol * self.__width}" + chr(10)}""" * self.__height
+            f"""{f"{self.print_symbol * self.width}"
+                      + chr(10)}"""
+            * self.height
         )
         return output[:-1]
 
