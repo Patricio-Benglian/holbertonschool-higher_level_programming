@@ -3,8 +3,10 @@
 Rectangle Module
 """
 
-class Square:
+
+class Rectangle:
     """
     Creates an empty class
     """
+
     pass
