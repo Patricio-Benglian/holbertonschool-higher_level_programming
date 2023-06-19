@@ -16,7 +16,8 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         if value < 1:
             raise ValueError(f"{name} must be greater than 0")
-        
+
+
 class Rectangle(BaseGeometry):
     """
     Rectangle based off BaseGeometry class
@@ -26,4 +27,3 @@ class Rectangle(BaseGeometry):
         BaseGeometry.integer_validator(self, "height", height)
         self.__width = width
         self.__height = height
-
