@@ -15,6 +15,9 @@ Using ``{function}``
 
 *** Make sure these tests cover as many possible edge cases imaginable. ***
 
+To test: ``` python3 -m doctest -v ./tests/1-my_list.txt | tail -2 ```
+Remove ``` | tail -2 ``` to see entire output
+
 ## Common Test Cases
 
 - Function with no arguments passed
