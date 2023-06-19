@@ -2,6 +2,8 @@
 """
 inherits_from module
 """
+
+
 def inherits_from(obj, a_class):
     """
     Returns true if obj is subclass of class
