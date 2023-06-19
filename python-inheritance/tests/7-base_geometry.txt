@@ -7,4 +7,7 @@ Using ``integer_validator``
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
     
     >>> BaseGeometry.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
 
