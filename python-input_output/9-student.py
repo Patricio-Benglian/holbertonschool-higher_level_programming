@@ -21,4 +21,3 @@ class Student:
         returns json format
         """
         return self.__dict__
-
