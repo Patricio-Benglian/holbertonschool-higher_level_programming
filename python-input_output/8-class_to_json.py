@@ -2,11 +2,9 @@
 """
 8-class_to_json module
 """
-import json
-
 
 def class_to_json(obj):
     """
     returns object as JSON
     """
-    return json.dumps(obj.__dict__)
+    return (obj.__dict__)
