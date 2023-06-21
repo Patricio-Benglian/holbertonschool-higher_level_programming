@@ -5,5 +5,8 @@
 
 
 def read_file(filename=""):
+    """
+    Reads file
+    """
     with open(filename) as f:
         f.read()
