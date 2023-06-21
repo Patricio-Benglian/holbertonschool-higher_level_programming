@@ -15,5 +15,3 @@ class Square(Rectangle):
         self.integer_validator("size", size)
         self.__width = size
         self.__height = size
-
-    
