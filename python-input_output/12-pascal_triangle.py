@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-pascal_triangle module
+12-pascal_triangle module
 """
 
 
