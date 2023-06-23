@@ -21,7 +21,7 @@ class Student:
         """
         returns json format
         """
-        if attrs != None:
+        if attrs is not None:
             return {
                 attribute: getattr(self, attribute)
                 for attribute in attrs
