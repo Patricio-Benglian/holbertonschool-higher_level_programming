@@ -6,7 +6,7 @@
 
 def pascal_triangle(n):
     """
-    returns list of lists representing pascals triangle to nth height
+    returns list of lists
     """
     if n <= 0:
         return []
