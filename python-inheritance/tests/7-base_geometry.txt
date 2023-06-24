@@ -11,3 +11,31 @@ Using ``integer_validator``
     ...
     TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
 
+    >>> BaseGeometry.integer_validator(BaseGeometry, "number", 17)
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, "notNumber", "henlo")
+    Traceback (most recent call last):
+    ...
+    TypeError: notNumber must be an integer
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, "number", -363)
+    Traceback (most recent call last):
+    ...
+    ValueError: number must be greater than 0
+
+    >>> BaseGeometry.integer_validator(BaseGeometry)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, "float", 1.7)
+    Traceback (most recent call last):
+    ...
+    TypeError: float must be an integer
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, "list", [1, 2, 3])
+    Traceback (most recent call last):
+    ...
+    TypeError: list must be an integer
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, None, 9001)
