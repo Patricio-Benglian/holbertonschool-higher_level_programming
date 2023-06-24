@@ -4,16 +4,17 @@ base_geometry model
 """
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """
     Rectangle based off BaseGeometry class
     """
+
     def __init__(self, width=0, height=0):
-        BaseGeometry.integer_validator(self, "width", width)
-        BaseGeometry.integer_validator(self, "height", height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__height = height
         self.__width = width
 
