@@ -71,3 +71,20 @@ Using ``integer_validator``
     Traceback (most recent call last):
     ...
     ValueError: Zero must be greater than 0
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, None, False)
+    Traceback (most recent call last):
+    ...
+    TypeError: None must be an integer
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, None, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: None must be an integer
+
+    
