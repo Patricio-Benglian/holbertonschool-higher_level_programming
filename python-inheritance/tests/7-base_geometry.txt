@@ -45,10 +45,10 @@ Using ``integer_validator``
     ...
     Exception: area() is not implemented
 
-    >>> BaseGeometry.integer_validator(BaseGeometry, "dict", {1, 3})
+    >>> BaseGeometry.integer_validator(BaseGeometry, "set", {1, 3})
     Traceback (most recent call last):
     ...
-    TypeError: dict must be an integer
+    TypeError: set must be an integer
 
     >>> BaseGeometry.integer_validator(BaseGeometry, "definitelyAnInt", int("e"))
     Traceback (most recent call last):
@@ -59,3 +59,15 @@ Using ``integer_validator``
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, "An Int Fr", int("66"))
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, "tuple", (1, 3))
+    Traceback (most recent call last):
+    ...
+    TypeError: tuple must be an integer
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, "Zero", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: Zero must be greater than 0
