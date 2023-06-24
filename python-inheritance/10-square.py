@@ -11,7 +11,7 @@ class Square(Rectangle):
     Square based off Rectangle class
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size):
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
