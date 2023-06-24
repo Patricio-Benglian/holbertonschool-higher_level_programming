@@ -62,10 +62,6 @@ Using ``integer_validator``
 
     >>> BaseGeometry.integer_validator(BaseGeometry, "An Int Fr", int("66"))
 
-    >>> BaseGeometry.integer_validator(BaseGeometry, "tuple", (1, 3))
-    Traceback (most recent call last):
-    ...
-    TypeError: tuple must be an integer
 
     >>> BaseGeometry.integer_validator(BaseGeometry, "Zero", 0)
     Traceback (most recent call last):
@@ -87,4 +83,17 @@ Using ``integer_validator``
     ...
     TypeError: None must be an integer
 
-    
+    >>> BaseGeometry.integer_validator(BaseGeometry, "list", [1])
+    Traceback (most recent call last):
+    ...
+    TypeError: list must be an integer
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, False, float('NaN'))
+    Traceback (most recent call last):
+    ...
+    TypeError: False must be an integer
+
+    >>> BaseGeometry.integer_validator(BaseGeometry, "atALossForWords", (96, ))
+    Traceback (most recent call last):
+    ...
+    TypeError: atALossForWords must be an integer
