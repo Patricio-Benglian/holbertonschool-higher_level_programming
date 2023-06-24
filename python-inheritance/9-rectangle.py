@@ -3,14 +3,11 @@
 base_geometry model
 """
 
-
 BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """
-    Rectangle based off BaseGeometry class
-    """
+    """Rectangle based off BaseGeometry class"""
 
     def __init__(self, width=0, height=0):
         """Initializes instance"""
@@ -24,4 +21,5 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
+        """returns description of rectangle"""
         return f"[Rectangle] {self.__width}/{self.__height}"
