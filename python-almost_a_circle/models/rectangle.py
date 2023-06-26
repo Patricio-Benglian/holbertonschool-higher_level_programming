@@ -99,4 +99,4 @@ class Rectangle(Base):
     def __str__(self):
         """yeah documentation yeah"""
         return (f"[Rectangle] ({self.id})"
-            f"/ {self.x}/{self.y} - {self.width}/{self.height}")
+                f"/ {self.x}/{self.y} - {self.width}/{self.height}")
