@@ -11,10 +11,8 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.dimVal("width", width)
-        self.dimVal("height", height)
-        self.posVal("x", x)
-        self.posVal("y", y)
+        kwargs = {"width": width, "height": height, "x": x, "y": y}
+        self.validator(**kwargs)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -26,7 +24,6 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
-        self.dimVal("width", width)
         self.__width = width
 
     @property
@@ -35,7 +32,6 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
-        self.dimVal("height", height)
         self.__width = height
 
     @property
@@ -44,7 +40,6 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
-        self.posVal("x", x)
         self.__x = x
 
     @property
@@ -53,17 +48,15 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
-        self.posVal("y", y)
         self.__y = y
 
-    def dimVal(self, name, arg):
-        if type(arg) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if arg < 1:
-            raise ValueError(f"{name} must be > 0")
-
-    def posVal(self, name, arg):
-        if type(arg) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if arg < 0:
-            raise ValueError(f"{name} must be >= 0")
+    def validator(self, **kwargs):
+        for key, value in kwargs.items():
+            if type(value) is not int:
+                raise TypeError(f"{key} must be an integer")
+            if key == "x" or key == "y":
+                if value < 0:
+                    raise ValueError(f"{key} must be >= 0")
+            if key == "width" or key == "height":
+                if value < 1:
+                    raise ValueError(f"{key} must be > 0")
