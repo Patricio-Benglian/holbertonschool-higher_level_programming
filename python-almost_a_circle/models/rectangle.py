@@ -102,16 +102,19 @@ class Rectangle(Base):
         return (f"[Rectangle] ({self.id})"
                 f" {self.x}/{self.y} - {self.width}/{self.height}")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates values of rectangle **ugly** """
-        for i, arg in enumerate(args):
-            if i == 0:
-                self.id = arg
-            if i == 1:
-                self.__width = arg
-            if i == 2:
-                self.__height = arg
-            if i == 3:
-                self.__x = arg
-            if i == 4:
-                self.__y = arg
+        if args:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.__width = arg
+                if i == 2:
+                    self.__height = arg
+                if i == 3:
+                    self.__x = arg
+                if i == 4:
+                    self.__y = arg
+        else:
+            # kwargs implementation #
