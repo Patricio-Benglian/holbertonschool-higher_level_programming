@@ -13,10 +13,17 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.dimVal("width", width)
-        self.dimVal("height", height)
-        self.posVal("x", x)
-        self.posVal("y", y)
+        argVals = [width, height, x, y]
+        argNam = ["width", "height", "x", "y"]
+        for ind, arg in enumerate(argVals):
+            if type(arg) != int:
+                raise TypeError(f"{argNam[ind]} must be an integer")
+        for ind, arg in enumerate(argVals[0:2]):
+            if arg < 1:
+                raise ValueError(f"{argNam[ind]} must be > 0")
+        for ind, arg in enumerate(argVals[2:]):
+            if arg < 0:
+                raise ValueError(f"{argNam[ind + 2]} must be >= 0")
         self.__width = width
         self.__height = height
         self.__x = x
@@ -29,7 +36,10 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        self.dimVal("width", value)
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value < 1:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -38,7 +48,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.dimVal("height", value)
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value < 1:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -47,7 +60,10 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.posVal("x", value)
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -56,17 +72,8 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.posVal("y", value)
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
-
-    def dimVal(self, name, arg):
-        if type(arg) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if arg < 1:
-            raise ValueError(f"{name} must be > 0")
-
-    def posVal(self, name, arg):
-        if type(arg) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if arg < 0:
-            raise ValueError(f"{name} must be >= 0")
