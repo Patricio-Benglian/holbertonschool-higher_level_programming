@@ -101,7 +101,7 @@ class Rectangle(Base):
         """yeah documentation yeah"""
         return (f"[Rectangle] ({self.id})"
                 f" {self.x}/{self.y} - {self.width}/{self.height}")
-    
+
     def update(self, *args):
         """updates values of rectangle **ugly** """
         for i, arg in enumerate(args):
