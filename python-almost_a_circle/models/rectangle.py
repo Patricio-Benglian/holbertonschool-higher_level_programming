@@ -93,8 +93,9 @@ class Rectangle(Base):
 
     def display(self):
         """prints rectangle in stdout"""
+        print(f"{chr(10) * self.y}", end="")
         for i in range(self.height):
-            print(f"{'#' * self.width}")
+            print(f"{' ' * self.x}{'#' * self.width}")
 
     def __str__(self):
         """yeah documentation yeah"""
