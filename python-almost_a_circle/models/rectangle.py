@@ -37,13 +37,13 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, x):
-        self.__x = x
+    def x(self, arg):
+        self.__x = arg
 
     @property
     def y(self):
         return self.__y
 
     @y.setter
-    def y(self, y):
-        self.__y = y
+    def y(self, arg):
+        self.__y = arg
