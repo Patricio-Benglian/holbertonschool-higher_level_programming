@@ -9,8 +9,9 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-    rectangle class inheriting from base
+    rectangle class based off Base
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         self.__width = width
         self.__height = height
@@ -23,29 +24,30 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, width):
-        self.__width = width
+    def width(self, value):
+        self.__width = value
 
     @property
     def height(self):
         return self.__height
 
     @height.setter
-    def height(self, height):
-        self.__width = height
+    def height(self, value):
+        self.__height = value
+
 
     @property
     def x(self):
         return self.__x
 
     @x.setter
-    def x(self, arg):
-        self.__x = arg
+    def x(self, value):
+        self.__x = value
 
     @property
     def y(self):
         return self.__y
 
     @y.setter
-    def y(self, arg):
-        self.__y = arg
+    def y(self, value):
+            self.__y = value
