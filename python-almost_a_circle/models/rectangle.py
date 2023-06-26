@@ -103,7 +103,7 @@ class Rectangle(Base):
                 f" {self.x}/{self.y} - {self.width}/{self.height}")
     
     def update(self, *args):
-        """updates values of rectangle"""
+        """updates values of rectangle **ugly** """
         for i, arg in enumerate(args):
             if i == 0:
                 self.id = arg
