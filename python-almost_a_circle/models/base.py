@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 """
-Base Class
+base module
 """
 
 
 class Base:
+    """
+    Base Class that manages ids
+    """
     __nb_objects = 0
     def __init__(self, id=None):
         if id is not None:
