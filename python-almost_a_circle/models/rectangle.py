@@ -13,6 +13,10 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        self.dimVal("width", width)
+        self.dimVal("height", height)
+        self.posVal("x", x)
+        self.posVal("y", y)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -25,6 +29,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self.dimVal("width", value)
         self.__width = value
 
     @property
@@ -33,6 +38,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        self.dimVal("height", value)
         self.__height = value
 
     @property
@@ -41,6 +47,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        self.posVal("x", value)
         self.__x = value
 
     @property
@@ -49,4 +56,17 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        self.posVal("y", value)
         self.__y = value
+
+    def dimVal(self, name, arg):
+        if type(arg) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if arg < 1:
+            raise ValueError(f"{name} must be > 0")
+
+    def posVal(self, name, arg):
+        if type(arg) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if arg < 0:
+            raise ValueError(f"{name} must be >= 0")
