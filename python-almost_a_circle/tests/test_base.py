@@ -4,6 +4,7 @@ test module
 """
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 class test_Base(unittest.TestCase):
     """
@@ -13,3 +14,8 @@ class test_Base(unittest.TestCase):
         """Check if creates"""
         instance = Base()
         self.assertTrue(isinstance(instance, Base))
+
+    def test_id(self):
+        """checks id"""
+        instance = Base(4)
+        self.assertEqual(instance.id, 4)
