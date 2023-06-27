@@ -50,5 +50,11 @@ class Square(Rectangle):
                 self.size = kw.get('size', self.size)
                 self.x = kw.get('x', self.x)
                 self.y = kw.get('y', self.y)
-            except:
+            except Exception:
                 pass
+
+    def to_dictionary(self):
+        """ returns dict representation """
+        selfDict = {'id': self.id, 'x': self.x,
+                    'size': self.size, 'y': self.y}
+        return selfDict
