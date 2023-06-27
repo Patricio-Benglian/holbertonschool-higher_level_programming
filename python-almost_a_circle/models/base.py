@@ -38,4 +38,6 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """returns json representation"""
-        return json.loads(json_string) or []
+        if not json_string:
+            return []
+        return json.loads(json_string)
