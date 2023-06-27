@@ -3,6 +3,7 @@
 base module
 """
 import json
+from os.path import isfile
 
 
 class Base:
@@ -51,3 +52,16 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+    
+    @classmethod
+    def load_from_file(cls):
+        """ returns list of instances """
+        retList = []
+        if not isfile(f"{cls.__name__}.json"):
+            return retList
+        with open(f"{cls.__name__}.json", "r", encoding="utf-8") as file:
+            listaso = file.read()
+        listaso = cls.from_json_string(listaso)
+        for dict in listaso:
+            retList.append(cls.create(**dict))
+        return retList
