@@ -50,7 +50,7 @@ class Square(Rectangle):
         else:
             try:
                 self.id = kw.get('id', self.id)
-                self.size = kw.get('size', self.size)
+                self.size(kw.get('size', self.size))
                 # tentatively delete this
                 self.width = kw.get('size', self.size)
                 self.height = kw.get('size', self.size)
