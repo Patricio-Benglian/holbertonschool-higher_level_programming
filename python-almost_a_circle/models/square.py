@@ -39,8 +39,7 @@ class Square(Rectangle):
                 if i == 0:
                     self.id = arg
                 if i == 1:
-                    self.width = arg
-                    self.height = arg
+                    self.size = arg
                 if i == 2:
                     self.x = arg
                 if i == 3:
@@ -48,8 +47,7 @@ class Square(Rectangle):
         else:
             try:
                 self.id = kw.get('id', self.id)
-                self.width = kw.get('width', self.width)
-                self.height = kw.get('height', self.height)
+                self.size = kw.get('size', self.size)
                 self.x = kw.get('x', self.x)
                 self.y = kw.get('y', self.y)
             except Exception:
