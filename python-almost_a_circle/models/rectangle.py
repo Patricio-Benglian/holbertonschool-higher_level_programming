@@ -102,7 +102,7 @@ class Rectangle(Base):
         return (f"[Rectangle] ({self.id})"
                 f" {self.x}/{self.y} - {self.width}/{self.height}")
 
-    def update(self, *args, **kwargs):
+    def update(self, *args, **kw):
         """updates values of rectangle **ugly** """
         if args:
             for i, arg in enumerate(args):
@@ -117,4 +117,11 @@ class Rectangle(Base):
                 if i == 4:
                     self.__y = arg
         else:
-            # kwargs implementation #
+            try:
+                self.id = kw.get('id', self.id)
+                self.width = kw.get('width', self.width)
+                self.height = kw.get('height', self.height)
+                self.x = kw.get('x', self.x)
+                self.y = kw.get('y', self.y)
+            except:
+                pass
