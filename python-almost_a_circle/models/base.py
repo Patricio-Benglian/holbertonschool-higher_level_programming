@@ -34,5 +34,3 @@ class Base:
             thelist = [obj.to_dictionary() for obj in list_objs]
         with open(f"{cls.__name__}.json", mode="w", encoding="utf-8") as file:
             file.write(cls.to_json_string(thelist))
-            
-            
