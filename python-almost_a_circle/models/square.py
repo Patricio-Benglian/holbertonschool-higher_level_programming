@@ -40,6 +40,9 @@ class Square(Rectangle):
                     self.id = arg
                 if i == 1:
                     self.size = arg
+                    # tentatively delete this
+                    self.width = arg
+                    self.height = arg
                 if i == 2:
                     self.x = arg
                 if i == 3:
@@ -48,6 +51,7 @@ class Square(Rectangle):
             try:
                 self.id = kw.get('id', self.id)
                 self.size = kw.get('size', self.size)
+                # tentatively delete this
                 self.width = kw.get('size', self.size)
                 self.height = kw.get('size', self.size)
                 self.x = kw.get('x', self.x)
