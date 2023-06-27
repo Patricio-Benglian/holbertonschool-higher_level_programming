@@ -48,6 +48,8 @@ class Square(Rectangle):
             try:
                 self.id = kw.get('id', self.id)
                 self.size = kw.get('size', self.size)
+                self.width = kw.get('size', self.size)
+                self.height = kw.get('size', self.size)
                 self.x = kw.get('x', self.x)
                 self.y = kw.get('y', self.y)
             except Exception:
