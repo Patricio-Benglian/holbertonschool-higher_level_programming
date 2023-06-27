@@ -123,5 +123,11 @@ class Rectangle(Base):
                 self.height = kw.get('height', self.height)
                 self.x = kw.get('x', self.x)
                 self.y = kw.get('y', self.y)
-            except:
+            except Exception:
                 pass
+
+    def to_dictionary(self):
+        """ returns dict representation """
+        selfDict = {'x': self.x, 'y': self.y, 'id': self.id,
+                    'height': self.height, 'width': self.width}
+        return selfDict
